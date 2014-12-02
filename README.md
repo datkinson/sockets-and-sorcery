@@ -20,8 +20,8 @@ node index.js
 
 The root page is just a socket chat example
 
-http://localhost:3700/dynamic Should contain an iframe to the chat application
+http://127.0.0.1:3700/dynamic Should contain an iframe to the chat application
 
-http://localhost:3700/controls Should have controls to alter the iframe content ont he dynamic page
+http://127.0.0.1:3700/controls Should have controls to alter the iframe content ont he dynamic page
 
 
