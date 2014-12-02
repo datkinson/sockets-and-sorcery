@@ -1,0 +1,9 @@
+doctype html
+html
+    head
+        title= "Dynamic Page Content"
+        script(src='/js/jquery.min.js')
+        script(src='/dynamic.js')
+        script(src='/socket.io/socket.io.js')
+    body
+        iframe#frame(width='800', height='166', scrolling='no', frameborder='no', src= srcStr, style='position: absolute')

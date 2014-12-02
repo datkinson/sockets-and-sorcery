@@ -1,0 +1,31 @@
+doctype html
+html
+    head
+        title= "Dynamic Page Content Controls"
+        script(src='/js/jquery.min.js')
+        script(src='/controls.js')
+        script(src='/socket.io/socket.io.js')
+    body
+        .controls
+            | Url
+            br
+            input#url(style='width:700px;')
+            br
+            br
+            | Width
+            br
+            input#width(style='width:350px;')
+            br
+            | Height
+            br
+            input#height(style='width:350px;')
+            br
+            br
+            | Left
+            br
+            input#left(style='width:350px;')
+            br
+            | Top
+            br
+            input#top(style='width:350px;')
+            input#send(type='button', value='send')
