@@ -9,6 +9,17 @@ app.get("/", function(req, res){
     res.render("page");
 });
 
+
+// Dynamic content page
+app.get("/dynamic", function(req, res){
+    var address = "/";
+    res.render('dynamic', { srcStr: address });
+});
+app.get("/controls", function(req, res){
+    res.render('controls');
+});
+
+
 app.use(express.static(__dirname + '/public'));
 
 var io = require('socket.io').listen(app.listen(port));
