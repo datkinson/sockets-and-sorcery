@@ -19,6 +19,11 @@ app.get("/controls", function(req, res){
     res.render('controls');
 });
 
+// rpg phaser application
+app.get("/rpg", function(req, res){
+    res.render('rpg');
+});
+
 
 app.use(express.static(__dirname + '/public'));
 
