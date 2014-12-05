@@ -6,22 +6,27 @@ app.set('views', __dirname + '/views');
 app.set('view engine', "jade");
 app.engine('jade', require('jade').__express);
 app.get("/", function(req, res){
-    res.render("page");
+    res.render("home");
 });
 
 
 // Dynamic content page
-app.get("/dynamic", function(req, res){
+app.get("/screen", function(req, res){
     var address = "/";
     res.render('dynamic', { srcStr: address });
 });
-app.get("/controls", function(req, res){
+app.get("/screen-control", function(req, res){
     res.render('controls');
 });
 
 // rpg phaser application
-app.get("/rpg", function(req, res){
+app.get("/map", function(req, res){
     res.render('rpg');
+});
+
+// chat
+app.get("/chat", function(req, res){
+    res.render('chat');
 });
 
 
