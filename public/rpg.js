@@ -26,7 +26,11 @@ Game.Play.prototype = {
 
 
     function itemDragStop (item) {
-      console.log("stopped!");
+      var player1 = {};
+      player1.key = item.key;
+      player1.x = item.world.x;
+      player1.y = item.world.y;
+      socket.emit('send', { message: 'player1', player1: player1 });
     };
 
     board.forEach(function (item) {
@@ -43,3 +47,13 @@ var game = new Phaser.Game(width, height, Phaser.AUTO, 'game-container');
 
 game.state.add('Play', Game.Play);
 game.state.start('Play');
+
+
+
+var socket = io.connect(window.location.host);
+socket.on('message', function (data) {
+    if(typeof(data.player1) !== 'undefined') {
+	player.x = data.player1.x;
+	player.y = data.player1.y;
+    }
+});
