@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    var socket = io.connect('http://localhost:3700');
+    var socket = io.connect(window.location.origin);
     var frame = document.getElementById("frame");
 
     socket.on('message', function (data) {
