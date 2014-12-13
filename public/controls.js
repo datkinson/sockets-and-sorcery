@@ -1,6 +1,6 @@
 window.onload = function() {
 
-    var socket = io.connect('http://localhost:3700');
+    var socket = io.connect(window.location.origin);
     var url = document.getElementById("url");
     var width = document.getElementById("width");
     var height = document.getElementById("height");
