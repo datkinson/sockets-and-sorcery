@@ -1,11 +1,12 @@
 {
-    "name": "Sockets-and-Sorcery",
-    "version": "0.0.1",
-    "description": "RPG assistant",
-    "dependencies": {
-        "socket.io": "latest",
-        "express": "latest",
-        "jade": "latest"
-    },
-    "author": "datkinson"
+  "name": "Sockets-and-Sorcery",
+  "version": "0.0.1",
+  "description": "RPG assistant",
+  "dependencies": {
+    "express": "latest",
+    "jade": "latest",
+    "pixi": "^0.2.1",
+    "socket.io": "latest"
+  },
+  "author": "datkinson"
 }

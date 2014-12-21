@@ -29,6 +29,10 @@ app.get("/chat", function(req, res){
     res.render('chat');
 });
 
+app.get("/pixi", function(req, res){
+    res.render('pixi');
+});
+
 
 app.use(express.static(__dirname + '/public'));
 
