@@ -54,16 +54,14 @@ function animate() {
 }
 
 function generatePlayers(number) {
-    for (i = 0; i < number; i++) {
+    number+=1;
+    for (i = 1; i < number; i++) {
         players[i] = new PIXI.Sprite(texture);
         players[i].scale.x = 0.5;
         players[i].scale.y = 0.5;
         players[i].anchor.x = 0.5;
         players[i].anchor.y = 0.5;
-        var x = ((width/number)*(i+1));
-        players[i].position.x = ((width/number)*(i+1)) - (players[i].width/2);
-        console.log('player '+i+' x', x);
-        console.log((players[i].width));
+        players[i].position.x = ((width/number)*i);
         players[i].position.y = height/2;
         stage.addChild(players[i]);
     }
